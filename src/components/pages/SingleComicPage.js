@@ -62,6 +62,12 @@ const View = ({comic}) => {
                 <div className="single-comic__price">{price}</div>
             </div>
             <Link to="/comics" className="single-comic__back">Back to all</Link>
+            <div className="counters">
+            <a href="https://www.liveinternet.ru/click"
+            target="_blank"><img src="https://counter.yadro.ru/logo?44.1"
+            title="LiveInternet"
+            alt="" style={{border: '0'}} width="31" height="31"/></a>
+            </div>
         </div>
     )
 }
