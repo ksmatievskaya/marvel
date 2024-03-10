@@ -5,91 +5,161 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <!--LiveInternet counter--><script>
-      new Image().src = "https://counter.yadro.ru/hit?r"+
-      escape(document.referrer)+((typeof(screen)=="undefined")?"":
-      ";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
-      screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
-      ";h"+escape(document.title.substring(0,150))+
-      ";"+Math.random();</script><!--/LiveInternet-->
+    <!--LiveInternet counter-->
+    <script>
+      new Image().src =
+        "https://counter.yadro.ru/hit?r" +
+        escape(document.referrer) +
+        (typeof screen == "undefined"
+          ? ""
+          : ";s" +
+            screen.width +
+            "*" +
+            screen.height +
+            "*" +
+            (screen.colorDepth ? screen.colorDepth : screen.pixelDepth)) +
+        ";u" +
+        escape(document.URL) +
+        ";h" +
+        escape(document.title.substring(0, 150)) +
+        ";" +
+        Math.random();
+    </script>
+    <!--/LiveInternet-->
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!-- Top100 (Kraken) Widget -->
-<span id="top100_widget"></span>
-<!-- END Top100 (Kraken) Widget -->
+    <span id="top100_widget"></span>
+    <!-- END Top100 (Kraken) Widget -->
 
-<!-- Top100 (Kraken) Counter -->
-<script>
-    (function (w, d, c) {
-    (w[c] = w[c] || []).push(function() {
-        var options = {
+    <!-- Top100 (Kraken) Counter -->
+    <script>
+      (function (w, d, c) {
+        (w[c] = w[c] || []).push(function () {
+          var options = {
             project: 7726914,
-            element: 'top100_widget',
-        };
-        try {
+            element: "top100_widget",
+          };
+          try {
             w.top100Counter = new top100(options);
-        } catch(e) { }
-    });
-    var n = d.getElementsByTagName("script")[0],
-    s = d.createElement("script"),
-    f = function () { n.parentNode.insertBefore(s, n); };
-    s.type = "text/javascript";
-    s.async = true;
-    s.src =
-    (d.location.protocol == "https:" ? "https:" : "http:") +
-    "//st.top100.ru/top100/top100.js";
+          } catch (e) {}
+        });
+        var n = d.getElementsByTagName("script")[0],
+          s = d.createElement("script"),
+          f = function () {
+            n.parentNode.insertBefore(s, n);
+          };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src =
+          (d.location.protocol == "https:" ? "https:" : "http:") +
+          "//st.top100.ru/top100/top100.js";
 
-    if (w.opera == "[object Opera]") {
-    d.addEventListener("DOMContentLoaded", f, false);
-} else { f(); }
-})(window, document, "_top100q");
-</script>
-<noscript>
-  <img src="//counter.rambler.ru/top100.cnt?pid=7726914" alt="Топ-100" />
-</noscript>
-<!-- END Top100 (Kraken) Counter -->
+        if (w.opera == "[object Opera]") {
+          d.addEventListener("DOMContentLoaded", f, false);
+        } else {
+          f();
+        }
+      })(window, document, "_top100q");
+    </script>
+    <noscript>
+      <img src="//counter.rambler.ru/top100.cnt?pid=7726914" alt="Топ-100" />
+    </noscript>
+    <!-- END Top100 (Kraken) Counter -->
 
-<!-- Top.Mail.Ru counter -->
-<script type="text/javascript">
-  var _tmr = window._tmr || (window._tmr = []);
-  _tmr.push({id: "3410006", type: "pageView", start: (new Date()).getTime()});
-  (function (d, w, id) {
-    if (d.getElementById(id)) return;
-    var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
-    ts.src = "https://top-fwz1.mail.ru/js/code.js";
-    var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
-    if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
-  })(document, window, "tmr-code");
-  </script>
-  <noscript><div><img src="https://top-fwz1.mail.ru/counter?id=3410006;js=na" style="position:absolute;left:-9999px;" alt="Top.Mail.Ru" /></div></noscript>
-  <!-- /Top.Mail.Ru counter -->
-  <!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-  m[i].l=1*new Date();
-  for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-  k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-  (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    <!-- Top.Mail.Ru counter -->
+    <script type="text/javascript">
+      var _tmr = window._tmr || (window._tmr = []);
+      _tmr.push({
+        id: "3410006",
+        type: "pageView",
+        start: new Date().getTime(),
+      });
+      (function (d, w, id) {
+        if (d.getElementById(id)) return;
+        var ts = d.createElement("script");
+        ts.type = "text/javascript";
+        ts.async = true;
+        ts.id = id;
+        ts.src = "https://top-fwz1.mail.ru/js/code.js";
+        var f = function () {
+          var s = d.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(ts, s);
+        };
+        if (w.opera == "[object Opera]") {
+          d.addEventListener("DOMContentLoaded", f, false);
+        } else {
+          f();
+        }
+      })(document, window, "tmr-code");
+    </script>
+    <noscript
+      ><div>
+        <img
+          src="https://top-fwz1.mail.ru/counter?id=3410006;js=na"
+          style="position: absolute; left: -9999px"
+          alt="Top.Mail.Ru"
+        /></div
+    ></noscript>
+    <!-- /Top.Mail.Ru counter -->
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+      (function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            (m[i].a = m[i].a || []).push(arguments);
+          };
+        m[i].l = 1 * new Date();
+        for (var j = 0; j < document.scripts.length; j++) {
+          if (document.scripts[j].src === r) {
+            return;
+          }
+        }
+        (k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a);
+      })(
+        window,
+        document,
+        "script",
+        "https://mc.yandex.ru/metrika/tag.js",
+        "ym"
+      );
 
-  ym(95560165, "init", {
-       clickmap:true,
-       trackLinks:true,
-       accurateTrackBounce:true,
-       webvisor:true
-  });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/95560165" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YQR9CWQSEH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+      ym(96697720, "init", {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true,
+      });
+    </script>
+    <noscript
+      ><div>
+        <img
+          src="https://mc.yandex.ru/watch/96697720"
+          style="position: absolute; left: -9999px"
+          alt=""
+        /></div
+    ></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-YQR9CWQSEH"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'G-YQR9CWQSEH');
-</script>
+      gtag("config", "G-YQR9CWQSEH");
+    </script>
   </body>
 </html>
